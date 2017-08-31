@@ -1,0 +1,68 @@
+public class ImplementQueueUsingLinkedList {
+	
+	Node front, rear;
+	class Node{
+		int data;
+		Node next;
+		
+		Node(int data){
+			this.data = data;
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ImplementQueueUsingLinkedList queue = new ImplementQueueUsingLinkedList();
+		queue.add(4);
+		queue.add(5);
+		queue.add(7);
+		queue.add(9);
+		queue.add(410);
+		//queue.remove();
+		queue.display();
+		queue.peek();
+
+	}
+	
+	public void add(int data) {
+		Node n = new Node(data);
+		if(front == null)
+			rear = front = n;
+		else {
+			front.next = n;
+			front = n;
+		}
+	}
+	
+	public boolean isEmpty() {
+		if(front == null && rear == null)
+			return true;
+		else
+			return false;
+	}
+	
+	public void remove() {
+		if (isEmpty())
+			System.out.println("empty queue");
+		else {
+			System.out.println("removed ele"+rear.data);
+			rear = rear.next;
+		}
+	}
+	
+	public void peek() {
+		if (isEmpty())
+			System.out.println("empty queue");
+		else
+			System.out.println("top of queue"+front.data);
+	}
+	
+	public void display() {
+		Node cur = rear;
+		while (cur != null) {
+			System.out.println(cur.data);
+			cur = cur.next;
+		}
+	}
+
+}

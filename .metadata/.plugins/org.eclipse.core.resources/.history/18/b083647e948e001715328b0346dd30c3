@@ -19,7 +19,6 @@ public class ImplementStackUsingLinkedList {
 		stack.push(410);
 		stack.pop();
 		stack.display();
-		stack.peek();
 	}
 	
 	public boolean isEmpty() {
@@ -65,7 +64,7 @@ public class ImplementStackUsingLinkedList {
 			System.out.println("stack is empty");
 		}
 		else
-			System.out.println("ele ata top"+top.data);
+			System.out.println(top.data);
 	}
 
 }
