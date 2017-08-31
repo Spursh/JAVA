@@ -1,0 +1,46 @@
+
+public class checking {
+	
+	public static int findLUSlength(String a, String b) {
+        StringBuilder sB = new StringBuilder();
+        int countMax = 0, countCur = 0;
+        if(a.length() > b.length()){
+            for(int i = 0; i < a.length(); i++){
+                sB.append(a.charAt(i));
+                if(!b.contains(sB))
+                    countCur++;
+                else{
+                    sB = null;
+                    if(countCur > countMax)
+                        countMax = countCur;
+                    countCur = 0;
+                }   
+            }
+        }
+        else{
+            for(int i = 0; i < b.length(); i++){
+                sB.append(b.charAt(i));
+                if(!a.contains(sB))
+                    countCur++;
+                else{
+                    sB = null;
+                    if(countCur > countMax)
+                        countMax = countCur;
+                    countCur = 0;
+                }   
+            }
+        }
+        return countMax;
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s1 = "aba";
+		String s2 = "cdc";
+		int a = findLUSlength(s1,s2);
+		System.out.println(a);
+
+	}
+
+}
+

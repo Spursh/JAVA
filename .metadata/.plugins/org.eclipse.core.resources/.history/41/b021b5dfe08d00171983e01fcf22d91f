@@ -1,0 +1,29 @@
+
+public class checking {
+	
+	public static boolean checkRecord(String s) {
+        int A = 0, cL = 1;
+        for (int i = 0; i < s.length(); i++){
+            switch (s.charAt(i)){
+                case 'A' : A++;
+                            if(A == 2)
+                                return false;
+                case 'L' : if(i+1 < s.length() && s.charAt(i+1) == 'L')
+                                cL++;
+                            if(cL > 2)
+                                return false;
+            }
+        }
+        return true;
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String moves = "PALLP";
+		boolean a = checkRecord(moves);
+		System.out.println(a);
+
+	}
+
+}
+

@@ -1,0 +1,32 @@
+
+public class checking {
+	
+	public static boolean judgeCircle(String moves) {
+        int x = 0, y = 0;
+        for (int i = 0; i < moves.length() - 1; i++){
+            if (moves.charAt(i) == 'U')
+                x++;
+            else if (moves.charAt(i) == 'D')
+                x--;
+            else if (moves.charAt(i) == 'R')
+                y++;
+            else if (moves.charAt(i) == 'L')
+                y--;
+        }
+        if(x == 0 && y == 0)
+            return true;
+        else
+            return false;
+        
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String moves = "UD";
+		boolean a = judgeCircle(moves);
+		System.out.println(a);
+
+	}
+
+}
+

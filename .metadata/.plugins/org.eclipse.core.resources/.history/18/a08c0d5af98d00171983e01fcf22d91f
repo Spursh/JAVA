@@ -1,0 +1,28 @@
+
+public class checking {
+	
+	public static boolean repeatedSubstringPattern(String s) {
+		StringBuilder sb = new StringBuilder();
+        for(int i =0; i < s.length(); i++){
+            sb.append(s.charAt(i));
+            System.out.println("1st loop"+sb);
+            /*for(int j = 1; j < s.length(); j = j + sb.length()){
+                sb = sb.append(sb);
+                System.out.println("2nd loop"+sb);
+            }
+            if (sb.toString().equals(s))
+                return true;*/
+        }
+        return false;
+        }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String s = "abab";
+		boolean a = repeatedSubstringPattern(s);
+		System.out.println(a);
+
+	}
+
+}
+
