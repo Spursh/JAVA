@@ -22,7 +22,18 @@ public class LinkedList {
 		display();
 		System.out.println("reverse print");
 		displayReverseIterative();
+		System.out.println("recursin reverse display");
+		Node c = head;
+		System.out.println("c.data"+c.data);
+		displayReverseRecursion(c);
 
+	}
+	
+	public static void displayReverseRecursion(Node c) {
+		if(c == null)
+			return;
+		displayReverseRecursion(c.next);
+		System.out.println(c.data);
 	}
 	
 	public static void display() {
