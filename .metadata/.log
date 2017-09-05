@@ -218,3 +218,20 @@ org.eclipse.recommenders.utils.Logs$LogTraceException
 	at org.eclipse.recommenders.internal.calls.rcp.RcpCallModelProvider.acquireModel(RcpCallModelProvider.java:1)
 	at org.eclipse.recommenders.internal.models.rcp.PrefetchModelArchiveJob.run(PrefetchModelArchiveJob.java:43)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.jdt.debug 4 125 2017-09-04 10:38:03.112
+!MESSAGE Internal error logged from JDI Debug: 
+!STACK 0
+org.eclipse.jdi.TimeoutException: Timeout occurred while waiting for packet 290067184.
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:193)
+	at org.eclipse.jdi.internal.connect.PacketReceiveManager.getReply(PacketReceiveManager.java:204)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:192)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:227)
+	at org.eclipse.jdi.internal.MirrorImpl.requestVM(MirrorImpl.java:243)
+	at org.eclipse.jdi.internal.ThreadReferenceImpl.resume(ThreadReferenceImpl.java:466)
+	at org.eclipse.jdi.internal.event.EventSetImpl.resumeThreads(EventSetImpl.java:125)
+	at org.eclipse.jdi.internal.event.EventSetImpl.resume(EventSetImpl.java:104)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.dispatch(EventDispatcher.java:210)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher.access$0(EventDispatcher.java:100)
+	at org.eclipse.jdt.internal.debug.core.EventDispatcher$1.run(EventDispatcher.java:250)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
