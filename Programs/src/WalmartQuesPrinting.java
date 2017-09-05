@@ -1,6 +1,6 @@
 import java.util.Queue;
 
-public class WalmartQues {
+public class WalmartQuesPrinting {
 	
 	public static void printing(int[] a) {
 		for(int i = 0; i < a.length; i++) {
